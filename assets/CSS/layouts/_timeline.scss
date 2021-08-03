@@ -1,0 +1,57 @@
+.timeline-area{
+    .timeline-list {
+        position: relative;
+        &:after{
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 100%;
+            background-color: tomato;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+        li{
+            position: relative;
+            clear: both;
+            overflow: hidden;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                background-color: tomato;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:nth-child(even){
+                .tomeline-content{
+                    float: right;
+                    text-align: left;
+                }
+            }
+
+            .tomeline-content {
+                border: solid 1px tomato;
+                padding: 20px;
+                float: left;
+                width: 45%;
+                text-align: right;
+                span {
+                    font-size: 20px;
+                    color: tomato;
+                    font-weight: 600;
+                }
+                h4 {
+                    font-size: 30px;
+                    text-transform: capitalize;
+                    line-height: 40px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
